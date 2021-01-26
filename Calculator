@@ -38,7 +38,7 @@ class SmartCalculator:
             if i in self.variables:
                 i = self.variables[i]
             try:
-                postfix.append(int(i))
+                postfix.append(float(i))
             except ValueError:
                 try:
                     if (i not in ops.keys()) and (i not in "()"):
@@ -83,7 +83,7 @@ class SmartCalculator:
         elif operand == "*":
             return first * second
         elif operand == "/":
-            return int(first / second)
+            return float(first / second)
         elif operand == "^":
             return first ** second
 
@@ -150,3 +150,4 @@ To get started, type the expression for the calculation.""")
 
 calc = SmartCalculator()
 calc.main()
+
